@@ -1,7 +1,7 @@
 var wrapLog = function (callback, name) {
   var fn = function (){
     var array = Array.from(arguments);
-    var strArray =  name + '(' + array.join(',') + ')=> ' + callback(...array);
+    var strArray = `${name}(${array.join(',')})=> ${callback(...array)}`;
     console.log(strArray);
   }
   return fn;
